@@ -1,0 +1,321 @@
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ code .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ touch hello.py
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ ls
+hello.py
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ ls -lart
+total 12
+drwxr-xr-x 1 adity 197609 0 May 23 17:57 ../
+drwxr-xr-x 1 adity 197609 0 May 23 18:02 ./
+-rw-r--r-- 1 adity 197609 0 May 23 18:02 hello.py
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ touch sample.txt
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ ls
+hello.py  sample.txt
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ pwd
+/c/Users/adity/Desktop/gitTut
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ git config --global user.name "Aditya"
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ git config --global user.name
+Aditya
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ git config --global user.email "adityaagarwal151@gmail.com"
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ git config --global user.email
+adityaagarwal151@gmail.com
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut
+$ git init
+Initialized empty Git repository in C:/Users/adity/Desktop/gitTut/.git/
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add hello.py
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ ls
+hello.py  sample.txt
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ ls -lart
+total 16
+drwxr-xr-x 1 adity 197609 0 May 23 17:57 ../
+-rw-r--r-- 1 adity 197609 0 May 23 18:02 hello.py
+-rw-r--r-- 1 adity 197609 0 May 23 18:04 sample.txt
+drwxr-xr-x 1 adity 197609 0 May 23 18:14 ./
+drwxr-xr-x 1 adity 197609 0 May 23 18:16 .git/
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.py
+        new file:   sample.txt
+
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ touch index.html
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.py
+        new file:   sample.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.py
+        new file:   index.html
+        new file:   sample.txt
+
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git commit -m "This is my first commit"
+[master (root-commit) a3bffd8] This is my first commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.py
+ create mode 100644 index.html
+ create mode 100644 sample.txt
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git checkout hello.py
+Updated 1 path from the index
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.py
+
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git commit hello.py
+Aborting commit due to empty commit message.
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git commit -m "changed files"
+[master 1111377] changed files
+ 1 file changed, 4 insertions(+)
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git checkout hello.py
+Updated 0 paths from the index
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git log
+commit 1111377988a168e5791f824063ef114ece642efd (HEAD -> master)
+Author: Aditya <adityaagarwal151@gmail.com>
+Date:   Mon May 23 18:30:07 2022 +0530
+
+    changed files
+
+commit a3bffd89658a9791f76aeafa3ee010782c0f8df0
+Author: Aditya <adityaagarwal151@gmail.com>
+Date:   Mon May 23 18:22:05 2022 +0530
+
+    This is my first commit
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git log -p -1
+commit 1111377988a168e5791f824063ef114ece642efd (HEAD -> master)
+Author: Aditya <adityaagarwal151@gmail.com>
+Date:   Mon May 23 18:30:07 2022 +0530
+
+    changed files
+
+diff --git a/hello.py b/hello.py
+index e69de29..7424a04 100644
+--- a/hello.py
++++ b/hello.py
+@@ -0,0 +1,4 @@
++def hello():
++    print("hi")
++
++
+\ No newline at end of file
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ q
+bash: q: command not found
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git commit -m "change in html"
+On branch master
+nothing to commit, working tree clean
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git commit -m "change in html"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git add .
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git commit -m "change in html"
+[master 27555bd] change in html
+ 1 file changed, 15 insertions(+)
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git log -p -1
+commit 27555bd40aae7dc7a87451b3dbc9c9615eb5c50b (HEAD -> master)
+Author: Aditya <adityaagarwal151@gmail.com>
+Date:   Mon May 23 18:35:35 2022 +0530
+
+    change in html
+
+diff --git a/index.html b/index.html
+index e69de29..b138f08 100644
+--- a/index.html
++++ b/index.html
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
++</head>
++
++<body>
++
++</body>
++
++</html>
+\ No newline at end of file
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ q
+bash: q: command not found
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git diff
+diff --git a/hello.py b/hello.py
+index 7424a04..04b1bda 100644
+--- a/hello.py
++++ b/hello.py
+@@ -1,4 +1,7 @@
+ def hello():
+     print("hi")
+
+-
+\ No newline at end of file
++print("hello")
++
++def add(a,b):
++    return a+b
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index b138f08..e3f161e 100644
+--- a/index.html
++++ b/index.html
+@@ -9,7 +9,7 @@
+ </head>
+
+ <body>
+-
++    <h1>hello</h1>
+ </body>
+
+ </html>
+\ No newline at end of file
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$ git checkout hello.py
+Updated 1 path from the index
+
+adity@LAPTOP-QH1JH403 MINGW64 ~/Desktop/gitTut (master)
+$
